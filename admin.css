@@ -1,0 +1,389 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Styles */
+.section {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Login Section */
+.login-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 100px auto;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo i {
+    font-size: 48px;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.logo h1 {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 2px solid #e9ecef;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.btn-edit {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Error Message */
+.error-message {
+    color: #dc3545;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Dashboard Styles */
+.dashboard-header {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info h1 {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info span {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Section */
+.form-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.form-actions .btn-primary,
+.form-actions .btn-secondary {
+    flex: 1;
+}
+
+/* List Section */
+.list-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.songs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* Song Cards */
+.song-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.song-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.song-cover {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.song-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-info h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.song-info p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.song-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+/* Loading Spinner */
+.spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.spinner-content i {
+    font-size: 32px;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.spinner-content p {
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .login-card {
+        margin: 50px auto;
+        padding: 30px 20px;
+    }
+
+    .header-info {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .header-info h1 {
+        font-size: 24px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .songs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-section,
+    .list-section {
+        padding: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .dashboard-content {
+        gap: 20px;
+    }
+}
